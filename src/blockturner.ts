@@ -76,7 +76,7 @@ async function runBlockTurner() {
   turner.node.start()
   turner.setAccount(walletAccount)
 
-  // recursivly check 15 block periods
+  // recursively check 15 block periods
   let depositTimer
   function depositLater() {
     depositTimer = setTimeout(async () => {
