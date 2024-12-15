@@ -40,7 +40,7 @@ for (targetDirectory of checkDirectories) {
   if (!fs.existsSync(targetDirectory)) {
     fs.mkdirSync(targetDirectory)
   }
-  // 3. Copy files from srouce to destination even if exist, overwrite
+  // 3. Copy files from source to destination even if exist, overwrite
   const sourceDirectory = targetDirectory.replace('/dist', '/src')
   unCopiedFiles[sourceDirectory].forEach(file => {
     fs.copyFileSync(path.join(sourceDirectory, file), path.join(targetDirectory, file))
